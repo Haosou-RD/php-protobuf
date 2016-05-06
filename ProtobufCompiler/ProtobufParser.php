@@ -33,7 +33,7 @@ class ProtobufParser
 
     private $_comment;
 
-    private $_targetDir = '.';
+    private $_targetDir = './';
 
     public function __construct($useNativeNamespaces = null)
     {
@@ -1007,7 +1007,7 @@ class ProtobufParser
 
                 // We don't support option parameters just yet, skip for now.
                 $messageContent = preg_replace('/^.+\n/', '', $messageContent);
-                
+
             } else if (strtolower($next) == 'package') {
 
                 $match = preg_match(
